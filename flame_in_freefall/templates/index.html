@@ -41,18 +41,20 @@
           <article class="card">
             <h3>Flame Behaviour Analysis</h3>
             <p>
-              Compare temperature trends, group-level averages and flame stability indicators
-              across experiments.
+              Compare temperature trends by experiment, group-level averages and measured
+              flame height versus oxygen concentration relationships.
             </p>
-            {% if not dataset_summary.is_verified_nasa_data %}
-            <p class="warning">Visualization currently uses demonstration data.</p>
+            {% if dataset_summary.source_label == 'Demonstration dataset' %}
+            <p class="warning">Visualization currently uses demonstration data for interface testing.</p>
+            {% elif not dataset_summary.is_verified_nasa_data %}
+            <p class="warning">Dataset is loaded but currently unverified for NASA provenance.</p>
             {% endif %}
           </article>
         </div>
 
         <div class="charts">
           <div class="chart-card">
-            <h3>Line Chart: Temperature Over Time</h3>
+            <h3>Line Chart: Temperature Over Time by Experiment</h3>
             <div id="line-chart" class="chart"></div>
           </div>
           <div class="chart-card">
@@ -60,7 +62,7 @@
             <div id="bar-chart" class="chart"></div>
           </div>
           <div class="chart-card">
-            <h3>Experimental Comparison: Height vs Stability</h3>
+            <h3>Experimental Comparison: Flame Height vs Oxygen Concentration</h3>
             <div id="comparison-chart" class="chart"></div>
           </div>
         </div>

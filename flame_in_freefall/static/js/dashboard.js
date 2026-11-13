@@ -15,21 +15,18 @@ function drawCharts(chartData) {
     return;
   }
 
-  Plotly.newPlot(
-    'line-chart',
-    [
-      {
-        x: chartData.line.x,
-        y: chartData.line.y,
-        mode: 'lines+markers',
-        line: { color: '#4da3ff', width: 3 },
-        marker: { color: '#9ed0ff', size: 6 },
-        name: chartData.line.name,
-      },
-    ],
-    getThemeLayout('Flame Temperature Over Time'),
-    { responsive: true },
-  );
+  const lineTraces = (chartData.line.traces || []).map((trace) => ({
+    x: trace.x,
+    y: trace.y,
+    mode: 'lines+markers',
+    line: { width: 2.5 },
+    marker: { size: 6 },
+    name: trace.name,
+  }));
+
+  Plotly.newPlot('line-chart', lineTraces, getThemeLayout('Flame Temperature by Experiment'), {
+    responsive: true,
+  });
 
   Plotly.newPlot(
     'bar-chart',
@@ -59,9 +56,9 @@ function drawCharts(chartData) {
       },
     ],
     {
-      ...getThemeLayout('Flame Height vs Stability Index'),
+      ...getThemeLayout('Flame Height vs Oxygen Concentration'),
       xaxis: { title: 'Flame height (mm)' },
-      yaxis: { title: 'Stability index (derived)' },
+      yaxis: { title: 'Oxygen concentration (%)' },
     },
     { responsive: true },
   );

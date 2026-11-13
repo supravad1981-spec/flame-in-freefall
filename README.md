@@ -9,17 +9,39 @@ Flame in Freefall is an initial web application foundation for the NASA Space Ap
 - Dashboard section for combustion experiment exploration.
 - Dataset information panel with clear source labeling.
 - Flame behaviour analysis and three Plotly visualization areas:
-  - line chart,
+  - line chart with separate traces per experiment,
   - bar chart,
-  - experiment comparison scatter chart.
+  - flame-height versus oxygen-concentration scatter comparison.
 - Dedicated microgravity combustion and spacecraft fire-safety sections.
 - About and references section with official NASA links.
 
-## Data integrity and NASA-source handling
+## Data integrity, provenance and limitations
 
 - The application **does not fabricate NASA findings**.
-- If a verified NASA CSV is not integrated yet, the app loads demonstration data from `data/demo_combustion_data.csv` and clearly marks it as demonstration-only.
-- To integrate verified data later, add `data/nasa_combustion_verified.csv` using validated NASA source material.
+- A CSV filename alone is never used to classify data as verified NASA data.
+- Verified status requires explicit provenance metadata in `data/nasa_combustion_metadata.json` including NASA source references.
+- If provenance metadata is missing or incomplete, the dataset is labeled **unverified**.
+- If no uploaded dataset is available, the app uses `data/demo_combustion_data.csv` and clearly marks it as **demonstration data**.
+- Demonstration data is for interface development only and must not be interpreted as real NASA experiment results.
+
+## Dataset validation rules
+
+The backend validates loaded data before visualization:
+
+- Required columns must exist:
+  - `experiment_id`,
+  - `experiment_group`,
+  - `time_s`,
+  - `flame_temperature_k`,
+  - `flame_height_mm`,
+  - `oxygen_ratio_percent`.
+- Numeric fields are validated for parseability.
+- Missing values in required fields are rejected.
+- Invalid measurements are rejected, including:
+  - negative time,
+  - non-positive temperature,
+  - negative flame height,
+  - oxygen concentration outside 0-100%.
 
 ## Project structure
 
@@ -61,4 +83,4 @@ python app.py
 
 - Keep data ingestion modular via `flame_in_freefall/data.py`.
 - Add verified NASA datasets and provenance documentation before publishing scientific conclusions.
-- Expand route structure and add automated tests as the platform evolves.
+- Expand route structure and automated tests as the platform evolves.
