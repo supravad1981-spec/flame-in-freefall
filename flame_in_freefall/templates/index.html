@@ -44,7 +44,9 @@
               Compare temperature trends by experiment, group-level averages and measured
               flame height versus oxygen concentration relationships.
             </p>
-            {% if dataset_summary.source_label == 'Demonstration dataset' %}
+            {% if dataset_load_error %}
+            <p class="warning">Dataset is currently unavailable. The dashboard rendered without experiment charts.</p>
+            {% elif dataset_summary.source_label == 'Demonstration dataset' %}
             <p class="warning">Visualization currently uses demonstration data for interface testing.</p>
             {% elif not dataset_summary.is_verified_nasa_data %}
             <p class="warning">Dataset is loaded but currently unverified for NASA provenance.</p>

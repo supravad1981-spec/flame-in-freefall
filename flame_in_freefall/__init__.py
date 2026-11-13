@@ -15,10 +15,19 @@ def create_app() -> Flask:
             "index.html",
             dataset_summary=dataset_summary,
             chart_data=chart_data,
+            dataset_load_error=False,
         )
 
     @app.errorhandler(DatasetLoadError)
     def handle_dataset_error(error: DatasetLoadError):
-        return render_template("index.html", dataset_summary=error.fallback_summary, chart_data={}), 500
+        return (
+            render_template(
+                "index.html",
+                dataset_summary=error.fallback_summary,
+                chart_data={},
+                dataset_load_error=True,
+            ),
+            200,
+        )
 
     return app
