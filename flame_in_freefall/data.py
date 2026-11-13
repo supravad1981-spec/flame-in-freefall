@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from dataclasses import asdict, dataclass
 from pathlib import Path
+from urllib.parse import urlparse
 
 import pandas as pd
 
@@ -69,13 +70,16 @@ def _is_verified_nasa_dataset(metadata: dict) -> bool:
         return False
 
     source_name = str(metadata.get("source_name", "")).lower()
-    source_url = str(metadata.get("source_url", "")).lower()
+    source_url = str(metadata.get("source_url", "")).strip()
     verification_status = str(metadata.get("verification_status", "")).lower()
+    parsed = urlparse(source_url)
+    hostname = (parsed.hostname or "").lower()
+    is_nasa_host = hostname == "nasa.gov" or hostname.endswith(".nasa.gov")
 
     return (
         verification_status == "verified"
         and "nasa" in source_name
-        and "nasa.gov" in source_url
+        and is_nasa_host
     )
 
 
