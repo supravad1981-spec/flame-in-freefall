@@ -1,0 +1,10 @@
+experiment_id,experiment_group,time_s,flame_temperature_k,flame_height_mm,oxygen_ratio_percent
+DEMO-001,A,0,1120,14.2,21.0
+DEMO-001,A,5,1098,13.8,20.4
+DEMO-001,A,10,1076,13.1,19.9
+DEMO-002,B,0,1184,15.1,21.7
+DEMO-002,B,5,1162,14.5,21.1
+DEMO-002,B,10,1140,13.9,20.6
+DEMO-003,C,0,1216,16.2,22.4
+DEMO-003,C,5,1193,15.5,21.8
+DEMO-003,C,10,1175,14.8,21.2
