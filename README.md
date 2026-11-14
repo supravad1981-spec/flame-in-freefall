@@ -1,86 +1,168 @@
 # Flame in Freefall
+## AI powered insights into microgravity combustion
 
-Flame in Freefall is an initial web application foundation for the NASA Space Apps Challenge 2026. The platform is focused on microgravity combustion exploration and spacecraft fire-safety context, with a clean architecture ready for verified NASA dataset integration.
 
-## Features in this foundation
+## Overview
 
-- Responsive, dark space-science themed interface (desktop/tablet/mobile).
-- Landing page with project purpose and scientific context.
-- Dashboard section for combustion experiment exploration.
-- Dataset information panel with clear source labeling.
-- Flame behaviour analysis and three Plotly visualization areas:
-  - line chart with separate traces per experiment,
-  - bar chart,
-  - flame-height versus oxygen-concentration scatter comparison.
-- Dedicated microgravity combustion and spacecraft fire-safety sections.
-- About and references section with official NASA links.
+Flame in Freefall is a data driven project aimed at understanding how fire behaves in a microgravity environment.
 
-## Data integrity, provenance and limitations
+This project aims to look into NASA's data sets and research into microgravity combustion. We will look at various parameters relating to combustion and use this data to give some meaningful insights. This will be done using a interactive dashboard.
 
-- The application **does not fabricate NASA findings**.
-- A CSV filename alone is never used to classify data as verified NASA data.
-- Verified status requires explicit provenance metadata in `data/nasa_combustion_metadata.json` including NASA source references.
-- If provenance metadata is missing or incomplete, the dataset is labeled **unverified**.
-- If no uploaded dataset is available, the app uses `data/demo_combustion_data.csv` and clearly marks it as **demonstration data**.
-- Demonstration data is for interface development only and must not be interpreted as real NASA experiment results.
+Combining scientific research with data analysis using python and interactive visualisations, our project will help users understand the data relating to combustion in microgravity environments and give more insight into fire safety in spacecraft.
 
-## Dataset validation rules
+## Problem
 
-The backend validates loaded data before visualization:
+Fire safety is a very important issue for human space exploration.
 
-- Required columns must exist:
-  - `experiment_id`,
-  - `experiment_group`,
-  - `time_s`,
-  - `flame_temperature_k`,
-  - `flame_height_mm`,
-  - `oxygen_ratio_percent`.
-- Numeric fields are validated for parseability.
-- Missing values in required fields are rejected.
-- Invalid measurements are rejected, including:
-  - negative time,
-  - non-positive temperature,
-  - negative flame height,
-  - oxygen concentration outside 0-100%.
+When in microgravity:
 
-## Project structure
+Flames will have different shapes and forms
+Natural convection caused by buoyancy will be greatly reduced
 
+Oxygen movement and combustion are affected
+Heat transfer and flame propagation can be different
+
+Fire detection and suppression can be challenging.
+
+To understand and gain insight into these issues we need to look at the experimental data and observations made from scientific research.
+Organising, analysing and visualising this information will help us gain some useful insights into how fire behaves in space.
+
+## Solution
+
+We aim to create an interactive AI powered dashboard that can explore microgravity combustion experiments and give an easy to understand format for the scientific data.
+This will:
+Look at relevant data sets from NASA relating to microgravity combustion
+Analyse and clean the experimental data
+Analyse the different variables relating to combustion
+Create interactive graphs
+Discover any patterns, correlations and anomalies.
+
+Provide observations from the data relating to fire safety in spacecraft.
+## Knowledge
+We have divided our project into 6 main areas of knowledge.
+### Combustion
+Define what combustion is
+Fire triangle (Fuel, Oxygen, Other Gases and Heat)
+Types of Combustion
+Complete and Incomplete Combustion
+Flame structure
+
+### Microgravity
+Understand what microgravity is
+Gravity vs Microgravity
+Buoyancy
+Natural Convection
+Diffusion
+Heat Transfer
+
+
+### Flaming in Space
+Flame behaviour on Earth vs in space
+Spherical diffusion flames
+Flame temperatures
+Flame height and shape
+Flame propagation and extinction
+Oxygen levels
+
+### NASA Combustion Experiments
+NASA Microgravity Combustion Experiments
+Flame Extinguishment Experiment (FLEX)
+Burning and Suppression of Solids (BASS)
+Flammability of materials on spacecraft
+Fire safety issues on the International Space Station
+NASA Experimental data and research sources
+Understanding the experimental data and CSV files
+Variables
+Independent and Dependent Variables
+Cleaning and Validation
+Missing data and outliers
+Dataset origins
+
+### Data Analysis
+Time series
+Average and mean temperature
+Line, Bar and Scatter Graphs
+Correlation vs Causation
+Identify patterns from the experimental data
+Interpreting data from graphs
+
+### Fire Safety on Spacecraft
+Fire risk
+Fire Detection
+Fire Suppression
+Flammability of materials in microgravity
+Managing oxygen and ventilation
+Astronaut safety
+Technology
+Python
+Pandas
+NumPy
+Flask
+HTML
+CSS
+JavaScript
+Plotly.js
+Data Visualisation Dashboard
+Git and GitHub
+
+## Technology Used
+| Technology | Use |
+|---|---|
+| Python |For Main programming language |
+| Pandas |For Data manipulation |
+| NumPy |For Numerical calculations |
+| Flask |For Backend |
+| HTML |For Dashboard |
+| CSS |For Styling |
+| JavaScript |For Front End |
+| Plotly.js |For Data visualisation |
+| Git & GitHub |For Version control |
+
+## Data Sources and Research
+We have focussed our research on experimental data and scientific research surrounding microgravity combustion.
+We have looked into the following sources for our research:
+NASA Open Data Portal
+NASA Glenn Research Center
+NASA Flame Extinguishment Experiment (FLEX)
+NASA Burning and Suppression of Solids (BASS)
+International Space Station Combustion Research
+All of our data sets will be properly referenced and we will note where they came from.
+
+## Project Structure
 ```text
-.
-├── app.py
-├── requirements.txt
-├── data/
-│   └── demo_combustion_data.csv
-└── flame_in_freefall/
-    ├── __init__.py
-    ├── data.py
-    ├── static/
-    │   ├── css/style.css
-    │   └── js/dashboard.js
-    └── templates/
-        └── index.html
+flame-in-freefall/
+│
+├── flame_in_freefall/
+│   ├── __init__.py
+│   └── data.py
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│
+├── README.md
+├── .gitignore
+└── requirements.txt
 ```
+Project structure may change.
 
-## Local setup
+## Impact
+This project aims to improve understanding of combustion in microgravity. It will also make it easier to explore the experimental data sets. Complex research has been simplified using visualisations. This will allow data driven exploration of fire risk on spacecraft. This will encourage further research into fire safety in space.
 
-1. Clone the repository.
-2. Create and activate a virtual environment.
-3. Install dependencies:
+## Future Development
+More advanced analysis of combustion patterns .
+Identify anomalies within the data sets.
+Predictive analysis of specific combustion variables.
+Include more NASA experimental data sets.
+More advanced visualisations.
+AI assisted interpretation of findings.
 
-```bash
-pip install -r requirements.txt
-```
+## Team
+This project was created as part of the NASA Space Apps Challenge 2026.
 
-4. Run the app:
-
-```bash
-python app.py
-```
-
-5. Open `http://127.0.0.1:5000` in your browser.
-
-## Notes for future development
-
-- Keep data ingestion modular via `flame_in_freefall/data.py`.
-- Add verified NASA datasets and provenance documentation before publishing scientific conclusions.
-- Expand route structure and automated tests as the platform evolves.
+## Project Status
+Currently being developed.
+We are focussing on creating an interactive dashboard using the relevant experimental data and looking into analysing the data with the use of AI.
+---
+Flame in Freefall - Using Microgravity Combustion Data to provide Fire Safety Insights.
