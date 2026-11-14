@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flame in Freefall | NASA Space Apps 2026</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#landing">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#microgravity">Microgravity</a>
+        <a href="#fire-safety">Fire Safety</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="landing" class="panel hero">
+        <h1>Flame in Freefall</h1>
+        <p>
+          A scientific exploration platform for understanding flame behavior in microgravity
+          and its relevance to spacecraft fire safety.
+        </p>
+      </section>
+
+      <section id="dashboard" class="panel">
+        <h2>Combustion Experiment Dashboard</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Dataset Information</h3>
+            <p><strong>Source:</strong> {{ dataset_summary.source_label }}</p>
+            <p><strong>Records:</strong> {{ dataset_summary.record_count }}</p>
+            <p><strong>Columns:</strong> {{ dataset_summary.columns | join(', ') if dataset_summary.columns else 'N/A' }}</p>
+            <p class="note">{{ dataset_summary.note }}</p>
+          </article>
+          <article class="card">
+            <h3>Flame Behaviour Analysis</h3>
+            <p>
+              Compare temperature trends by experiment, group-level averages and measured
+              flame height versus oxygen concentration relationships.
+            </p>
+            {% if dataset_load_error %}
+            <p class="warning">Dataset is currently unavailable. The dashboard rendered without experiment charts.</p>
+            {% elif dataset_summary.source_label == 'Demonstration dataset' %}
+            <p class="warning">Visualization currently uses demonstration data for interface testing.</p>
+            {% elif not dataset_summary.is_verified_nasa_data %}
+            <p class="warning">Dataset is loaded but currently unverified for NASA provenance.</p>
+            {% endif %}
+          </article>
+        </div>
+
+        <div class="charts">
+          <div class="chart-card">
+            <h3>Line Chart: Temperature Over Time by Experiment</h3>
+            <div id="line-chart" class="chart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>Bar Chart: Experimental Group Comparison</h3>
+            <div id="bar-chart" class="chart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>Experimental Comparison: Flame Height vs Oxygen Concentration</h3>
+            <div id="comparison-chart" class="chart"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="microgravity" class="panel">
+        <h2>Microgravity Combustion Insights</h2>
+        <p>
+          In microgravity, flames become more spherical due to reduced buoyancy-driven flow.
+          This changes heat transfer, oxygen mixing and soot production behaviour compared to
+          Earth-based combustion.
+        </p>
+      </section>
+
+      <section id="fire-safety" class="panel">
+        <h2>Spacecraft Fire-Safety Relevance</h2>
+        <p>
+          Understanding flame dynamics in reduced gravity supports safer spacecraft design,
+          emergency response planning and onboard material testing protocols.
+        </p>
+      </section>
+
+      <section id="about" class="panel">
+        <h2>About & References</h2>
+        <p>
+          This foundation is built for NASA Space Apps Challenge 2026 and is prepared for future
+          integration of verified NASA combustion experiment datasets.
+        </p>
+        <ul>
+          <li><a href="https://www.nasa.gov" target="_blank" rel="noreferrer">NASA Official Website</a></li>
+          <li><a href="https://science.nasa.gov" target="_blank" rel="noreferrer">NASA Science</a></li>
+          <li><a href="https://www.spaceappschallenge.org" target="_blank" rel="noreferrer">NASA Space Apps Challenge</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <script id="chart-data" type="application/json">{{ chart_data | tojson }}</script>
+  </body>
+</html>
