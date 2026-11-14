@@ -114,7 +114,7 @@ Git and GitHub
 | Flask |For Backend |
 | HTML |For Dashboard |
 | CSS |For Styling |
-| JavaScript |For ront End |
+| JavaScript |For Front End |
 | Plotly.js |For Data visualisation |
 | Git & GitHub |For Version control |
 
