@@ -108,15 +108,15 @@ Git and GitHub
 ## Technology Used
 | Technology | Use |
 |---|---|
-| Python | Main programming language |
-| Pandas | Data manipulation |
-| NumPy | Numerical calculations |
-| Flask | Backend |
-| HTML | Dashboard |
-| CSS | Styling |
-| JavaScript | Front End |
-| Plotly.js | Data visualisation |
-| Git & GitHub | Version control |
+| Python |For Main programming language |
+| Pandas |For Data manipulation |
+| NumPy |For Numerical calculations |
+| Flask |For Backend |
+| HTML |For Dashboard |
+| CSS |For Styling |
+| JavaScript |For ront End |
+| Plotly.js |For Data visualisation |
+| Git & GitHub |For Version control |
 
 ## Data Sources and Research
 We have focussed our research on experimental data and scientific research surrounding microgravity combustion.
