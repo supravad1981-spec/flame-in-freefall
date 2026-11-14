@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050b18">
+
+    <title>FLAME IN FREEFALL | Mission Control</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <a href="#home" class="brand">
+            <span class="brand-icon">F</span>
+            <span>
+                <strong>FLAME<span> / </span>FREEFALL</strong>
+                <small>SPACE RESEARCH DIVISION</small>
+            </span>
+        </a>
+
+        <div class="sidebar-label">MISSION NAVIGATION</div>
+
+        <nav class="side-nav">
+            <a href="#home" class="nav-link active"><span>⌂</span> Mission Overview</a>
+            <a href="#telemetry" class="nav-link"><span>◫</span> Mission Telemetry</a>
+            <a href="#explorer" class="nav-link"><span>▤</span> Experiment Explorer</a>
+            <a href="#science" class="nav-link"><span>◉</span> Combustion Science</a>
+            <a href="#safety" class="nav-link"><span>⬡</span> Fire Safety Insights</a>
+            <a href="#mission-data" class="nav-link"><span>⌘</span> Data & Sources</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="connection">
+                <span class="pulse"></span>
+                STATIC DATA INTERFACE
+            </div>
+            <p>NASA SPACE APPS CHALLENGE 2026</p>
+            <p class="version">PROJECT VERSION 1.0</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <div class="breadcrumb">SPACE SCIENCE <span>/</span> FLEX INVESTIGATION</div>
+                <div class="topbar-title">MISSION CONTROL CENTER</div>
+            </div>
+
+            <div class="topbar-right">
+                <span class="mission-status">
+                    <span class="pulse"></span> RESEARCH MODE
+                </span>
+                <span class="mission-id">PSI-69</span>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    MICROGRAVITY COMBUSTION RESEARCH
+                </div>
+
+                <h1>FLAME IN<br><span>FREEFALL.</span></h1>
+
+                <p class="hero-description">
+                    Understanding how fire behaves beyond Earth.
+                    Exploring combustion science to support safer
+                    human space exploration.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#telemetry" class="primary-button">EXPLORE MISSION DATA ↗</a>
+                    <a href="#science" class="secondary-button">DISCOVER THE SCIENCE</a>
+                </div>
+
+                <div class="hero-meta">
+                    <div>
+                        <small>INVESTIGATION</small>
+                        <strong>FLAME EXTINGUISHMENT EXPERIMENT</strong>
+                    </div>
+                    <div>
+                        <small>RESEARCH PLATFORM</small>
+                        <strong>INTERNATIONAL SPACE STATION</strong>
+                    </div>
+                    <div>
+                        <small>RESEARCH ID</small>
+                        <strong>NASA PSI-69</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-coordinate">
+                <span>MISSION / FLEX</span>
+                <span>MICROGRAVITY RESEARCH</span>
+            </div>
+        </section>
+
+        <!-- TELEMETRY -->
+        <section id="telemetry" class="content-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">01 / EXPERIMENTAL DATA</div>
+                    <h2>MISSION <span>TELEMETRY</span></h2>
+                    <p>Overview of the currently available FLEX experiment export.</p>
+                </div>
+                <div class="section-code">DATA / 001</div>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>EXPERIMENT RECORDS</span>
+                        <span class="stat-icon">▤</span>
+                    </div>
+                    <div class="stat-number" id="total-records">100</div>
+                    <div class="stat-footer">Available dataset records</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>FUEL CATEGORIES</span>
+                        <span class="stat-icon">◈</span>
+                    </div>
+                    <div class="stat-number" id="fuel-count">02</div>
+                    <div class="stat-footer">Based on available export</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>QUALITY REVIEW</span>
+                        <span class="stat-icon">◎</span>
+                    </div>
+                    <div class="stat-number" id="quality-count">—</div>
+                    <div class="stat-footer">Review status from dataset</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>DATA COVERAGE</span>
+                        <span class="stat-icon">⌁</span>
+                    </div>
+                    <div class="stat-number">PARTIAL</div>
+                    <div class="stat-footer">100 records of 275 listed tests</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CHARTS -->
+        <section class="content-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">02 / SCIENTIFIC VISUALIZATION</div>
+                    <h2>COMBUSTION <span>ANALYTICS</span></h2>
+                    <p>Explore the relationships between experimental measurements.</p>
+                </div>
+                <div class="section-code">ANALYSIS / 002</div>
+            </div>
+
+            <div class="charts-grid">
+                <article class="chart-card">
+                    <div class="chart-heading">
+                        <div>
+                            <span class="chart-index">FIG 01</span>
+                            <h3>Burning Rate Analysis</h3>
+                        </div>
+                        <span class="chart-unit">mm/s</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="burning-chart"></canvas>
+                    </div>
+                </article>
+
+                <article class="chart-card">
+                    <div class="chart-heading">
+                        <div>
+                            <span class="chart-index">FIG 02</span>
+                            <h3>Burn Time Distribution</h3>
+                        </div>
+                        <span class="chart-unit">SECONDS</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="burntime-chart"></canvas>
+                    </div>
+                </article>
+
+                <article class="chart-card wide-chart">
+                    <div class="chart-heading">
+                        <div>
+                            <span class="chart-index">FIG 03</span>
+                            <h3>Droplet Diameter vs Burning Rate</h3>
+                        </div>
+                        <span class="chart-unit">SCATTER ANALYSIS</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="diameter-chart"></canvas>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXPERIMENT EXPLORER -->
+        <section id="explorer" class="content-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">03 / DATA INVESTIGATION</div>
+                    <h2>EXPERIMENT <span>EXPLORER</span></h2>
+                    <p>Search, filter and inspect the available experimental records.</p>
+                </div>
+                <div class="section-code">DATABASE / 003</div>
+            </div>
+
+            <div class="explorer-panel">
+                <div class="explorer-toolbar">
+                    <input id="search-input" type="search"
+                        placeholder="Search test number, fuel or identifier...">
+
+                    <select id="fuel-select">
+                        <option value="">ALL FUELS</option>
+                    </select>
+
+                    <select id="outcome-select">
+                        <option value="">ALL OUTCOMES</option>
+                    </select>
+
+                    <button id="reset-search" class="outline-button">
+                        RESET FILTERS
+                    </button>
+
+                    <button id="export-csv" class="primary-button">
+                        EXPORT CSV ↓
+                    </button>
+                </div>
+
+                <div class="table-summary">
+                    <span>EXPERIMENT DATABASE</span>
+                    <span id="result-count">LOADING RECORDS...</span>
+                </div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TEST ID</th>
+                                <th>FLEX IDENTIFIER</th>
+                                <th>FUEL</th>
+                                <th>PRESSURE</th>
+                                <th>DROPLET Ø</th>
+                                <th>BURN RATE</th>
+                                <th>BURN TIME</th>
+                                <th>OUTCOME</th>
+                                <th>DETAILS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-table">
+                            <tr>
+                                <td colspan="9">Preparing experiment database...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button id="prev-page" class="outline-button">← PREVIOUS</button>
+                    <span id="page-info">PAGE 1</span>
+                    <button id="next-page" class="outline-button">NEXT →</button>
+                </div>
+            </div>
+
+            <div class="details-panel" id="record-details" hidden>
+                <div class="section-heading">
+                    <h3>EXPERIMENT DETAILS</h3>
+                    <button id="close-details" class="outline-button">CLOSE ×</button>
+                </div>
+                <div id="details-content" class="details-grid"></div>
+            </div>
+        </section>
+
+        <!-- SCIENCE -->
+        <section id="science" class="content-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">04 / RESEARCH BACKGROUND</div>
+                    <h2>THE SCIENCE OF <span>FIRE</span></h2>
+                    <p>How combustion changes when gravity is reduced.</p>
+                </div>
+                <div class="section-code">SCIENCE / 004</div>
+            </div>
+
+            <div class="science-grid">
+                <article class="science-card">
+                    <div class="science-number">01</div>
+                    <div class="science-symbol">◉</div>
+                    <h3>Microgravity</h3>
+                    <p>
+                        Reduced buoyancy-driven convection changes how
+                        hot gases and combustion products move around a flame.
+                    </p>
+                </article>
+
+                <article class="science-card">
+                    <div class="science-number">02</div>
+                    <div class="science-symbol">◎</div>
+                    <h3>Droplet Combustion</h3>
+                    <p>
+                        Liquid fuel droplets provide a way to study
+                        evaporation, burning rates and flame behaviour.
+                    </p>
+                </article>
+
+                <article class="science-card">
+                    <div class="science-number">03</div>
+                    <div class="science-symbol">⬡</div>
+                    <h3>Flame Extinction</h3>
+                    <p>
+                        Understanding the conditions under which flames
+                        extinguish can inform spacecraft fire research.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <a href="#combustion-lab">Combustion Lab</a>
+
+        <!-- COMBUSTION PHYSICS LAB -->
+        <section id="combustion-lab" class="ff-lab">
+            <div class="ff-heading">
+                <div>
+                    <div class="ff-eyebrow">04 / COMBUSTION PHYSICS LAB</div>
+                    <h2>FIRE BEYOND <span>EARTH</span></h2>
+                    <p>Explore how gravity changes the behaviour of a flame.</p>
+                </div>
+                <div class="ff-section-code">LIVE SIMULATION / 004</div>
+            </div>
+
+            <div class="ff-comparison">
+                <article class="ff-flame-card earth-card">
+                    <div class="ff-card-heading">
+                        <div>
+                            <span class="ff-status-dot earth-dot"></span>
+                            <h3>1G EARTH FLAME</h3>
+                        </div>
+                        <span class="ff-tag earth-tag">9.8 m/s²</span>
+                    </div>
+
+                    <p>
+                        On Earth, buoyancy causes hot gases to rise.
+                        This produces an elongated flame and supports
+                        natural convection around the flame.
+                    </p>
+
+                    <div class="ff-canvas-wrap earth-wrap">
+                        <canvas id="flame-earth" aria-label="Illustrative animated Earth gravity flame"></canvas>
+                        <span class="ff-canvas-label">BUOYANCY-DRIVEN CONVECTION</span>
+                    </div>
+
+                    <div class="ff-traits">
+                        <div><small>SHAPE</small><strong>Elongated</strong></div>
+                        <div><small>FLOW</small><strong>Upward</strong></div>
+                        <div><small>GRAVITY</small><strong>1G</strong></div>
+                    </div>
+                </article>
+
+                <article class="ff-flame-card micro-card">
+                    <div class="ff-card-heading">
+                        <div>
+                            <span class="ff-status-dot micro-dot"></span>
+                            <h3>0G MICROGRAVITY FLAME</h3>
+                        </div>
+                        <span class="ff-tag micro-tag">Near 0 m/s²</span>
+                    </div>
+
+                    <p>
+                        With buoyancy greatly reduced, transport of oxygen
+                        and fuel vapour is dominated more by molecular
+                        diffusion. Some droplet flames can become rounded
+                        and blue.
+                    </p>
+
+                    <div class="ff-canvas-wrap micro-wrap">
+                        <canvas id="flame-micro" aria-label="Illustrative animated microgravity flame"></canvas>
+                        <span class="ff-canvas-label">DIFFUSION-DOMINATED TRANSPORT</span>
+                    </div>
+
+                    <div class="ff-traits">
+                        <div><small>SHAPE</small><strong>Rounded</strong></div>
+                        <div><small>FLOW</small><strong>Reduced buoyancy</strong></div>
+                        <div><small>GRAVITY</small><strong>0G</strong></div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- INTERACTIVE SIMULATOR -->
+            <div class="ff-simulator">
+                <div class="ff-simulator-heading">
+                    <div>
+                        <div class="ff-eyebrow">INTERACTIVE EXPERIMENT</div>
+                        <h3>FLAME PHYSICS SIMULATOR</h3>
+                        <p>Adjust the experimental conditions and observe the illustrative flame response.</p>
+                    </div>
+                    <span class="ff-live-indicator">● SIMULATOR ACTIVE</span>
+                </div>
+
+                <div class="ff-simulator-grid">
+                    <div class="ff-controls">
+
+                        <div class="ff-control">
+                            <div class="ff-control-title">
+                                <label for="ff-gravity">Gravity level</label>
+                                <output id="ff-gravity-value">9.8 m/s²</output>
+                            </div>
+                            <input id="ff-gravity" type="range" min="0" max="9.8" step="0.1" value="9.8">
+                            <div class="ff-range-labels">
+                                <span>0G · Microgravity</span>
+                                <span>1G · Earth</span>
+                            </div>
+                        </div>
+
+                        <div class="ff-control">
+                            <div class="ff-control-title">
+                                <label for="ff-oxygen">Oxygen concentration</label>
+                                <output id="ff-oxygen-value">21%</output>
+                            </div>
+                            <input id="ff-oxygen" type="range" min="10" max="30" step="1" value="21">
+                            <div class="ff-range-labels">
+                                <span>10%</span>
+                                <span>30%</span>
+                            </div>
+                        </div>
+
+                        <div class="ff-control">
+                            <div class="ff-control-title">
+                                <label for="ff-airflow">Airflow intensity</label>
+                                <output id="ff-airflow-value">20%</output>
+                            </div>
+                            <input id="ff-airflow" type="range" min="0" max="100" step="1" value="20">
+                            <div class="ff-range-labels">
+                                <span>Still</span>
+                                <span>High airflow</span>
+                            </div>
+                        </div>
+
+                        <div class="ff-control">
+                            <div class="ff-control-title">
+                                <label for="ff-fuel">Fuel type</label>
+                            </div>
+                            <select id="ff-fuel">
+                                <option value="methanol">Methanol</option>
+                                <option value="heptane">Heptane</option>
+                            </select>
+                        </div>
+
+                        <div class="ff-sim-buttons">
+                            <button id="ff-reset" type="button">RESET CONDITIONS</button>
+                        </div>
+                    </div>
+
+                    <div class="ff-simulation-view">
+                        <div class="ff-simulation-top">
+                            <span>SIMULATED FLAME RESPONSE</span>
+                            <span id="ff-simulation-mode">EARTH GRAVITY</span>
+                        </div>
+
+                        <canvas id="flame-simulator" aria-label="Interactive illustrative flame physics simulator"></canvas>
+
+                        <div class="ff-simulation-result">
+                            <div>
+                                <small>GRAVITY</small>
+                                <strong id="ff-result-gravity">1G</strong>
+                            </div>
+                            <div>
+                                <small>OXYGEN</small>
+                                <strong id="ff-result-oxygen">21%</strong>
+                            </div>
+                            <div>
+                                <small>FUEL</small>
+                                <strong id="ff-result-fuel">METHANOL</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ff-science-note">
+                    <strong>SCIENTIFIC NOTE</strong>
+                    <p>
+                        This is an educational visual simulation, not a validated
+                        combustion model or a prediction of actual fire behaviour.
+                        Real flame behaviour depends on fuel properties, pressure,
+                        temperature, oxygen availability, geometry and experimental
+                        conditions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIRE SAFETY -->
+        <section id="safety" class="content-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">05 / MISSION APPLICATION</div>
+                    <h2>SPACECRAFT <span>FIRE SAFETY</span></h2>
+                    <p>Why microgravity combustion research matters.</p>
+                </div>
+                <div class="section-code">SAFETY / 005</div>
+            </div>
+
+            <div class="safety-panel">
+                <div class="safety-content">
+                    <div class="eyebrow">BEYOND EARTH / FUTURE MISSIONS</div>
+                    <h2>PROTECTING THE<br><span>CREW.</span></h2>
+                    <p>
+                        Research into flame behaviour under microgravity
+                        conditions can support the development of improved
+                        fire prevention, detection and suppression strategies.
+                    </p>
+
+                    <div class="mission-destinations">
+                        <div>
+                            <span>DESTINATION 01</span>
+                            <strong>MOON</strong>
+                        </div>
+                        <div>
+                            <span>DESTINATION 02</span>
+                            <strong>MARS</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="safety-visual">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+                    <div class="orbit-center">FLEX</div>
+                </div>
+            </div>
+
+            <p class="disclaimer">
+                Research exploration only. This interface is not a certified
+                spacecraft fire detection, prediction or suppression system.
+            </p>
+        </section>
+
+        <!-- SOURCES -->
+        <section id="mission-data" class="content-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">06 / DATA PROVENANCE</div>
+                    <h2>MISSION <span>ARCHIVE</span></h2>
+                    <p>Dataset scope, limitations and research references.</p>
+                </div>
+                <div class="section-code">ARCHIVE / 006</div>
+            </div>
+
+            <div class="archive-grid">
+                <article class="archive-card">
+                    <span class="chart-index">DATA SOURCE</span>
+                    <h3>NASA PSI-69 FLEX</h3>
+                    <p>Available export containing 100 experimental records.</p>
+                    <a href="https://psi.nasa.gov/physci/repo/data/investigations/PSI-69"
+                       target="_blank" rel="noopener noreferrer">OPEN INVESTIGATION ↗</a>
+                </article>
+
+                <article class="archive-card">
+                    <span class="chart-index">RESEARCH REFERENCE</span>
+                    <h3>FLEX DATA DOI</h3>
+                    <p>Research reference supplied with the project dataset.</p>
+                    <a href="https://doi.org/10.60555/mbq8-0451"
+                       target="_blank" rel="noopener noreferrer">OPEN DOI ↗</a>
+                </article>
+
+                <article class="archive-card">
+                    <span class="chart-index">DATA LIMITATION</span>
+                    <h3>PARTIAL EXPORT</h3>
+                    <p>
+                        The repository lists 275 tests. This interface uses
+                        the available 100-record export, not the complete table.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="brand">
+                <span class="brand-icon">F</span>
+                <strong>FLAME / FREEFALL</strong>
+            </div>
+            <p>NASA SPACE APPS CHALLENGE 2026</p>
+            <p>SCIENTIFIC DATA EXPLORATION FOR SAFER SPACE EXPLORATION</p>
+            <span class="footer-line">END OF MISSION INTERFACE</span>
+        </footer>
+
+        <!-- PROJECT IMPACT -->
+        <section id="project-impact" class="content-section impact-section">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">07 / PROJECT IMPACT</div>
+                    <h2>WHY FLAME IN FREEFALL <span>MATTERS</span></h2>
+                    <p>From experimental combustion data to safer human space exploration.</p>
+                </div>
+                <div class="section-code">MISSION VALUE / 007</div>
+            </div>
+
+            <div class="impact-intro">
+                <div>
+                    <span class="impact-label">OUR MISSION</span>
+                    <h3>Turning combustion research into meaningful fire-safety insights.</h3>
+                </div>
+                <p>
+                    Fire behaves differently in microgravity. By exploring available
+                    Flame Extinguishment Experiment (FLEX) measurements, this platform
+                    helps users investigate combustion behaviour, identify experimental
+                    patterns and understand why these findings matter for future
+                    spacecraft design.
+                </p>
+            </div>
+
+            <div class="impact-grid">
+                <article class="impact-card">
+                    <span class="impact-number">01</span>
+                    <div class="impact-icon">◉</div>
+                    <h3>Understand Fire in Microgravity</h3>
+                    <p>
+                        Explore how fuel type, droplet diameter, burning rate and
+                        surrounding gas conditions relate to flame behaviour
+                        beyond Earth's gravity.
+                    </p>
+                    <div class="impact-benefit">BENEFIT: BETTER SCIENTIFIC UNDERSTANDING</div>
+                </article>
+
+                <article class="impact-card">
+                    <span class="impact-number">02</span>
+                    <div class="impact-icon">⌁</div>
+                    <h3>Compare Experimental Behaviour</h3>
+                    <p>
+                        Compare Methanol and Heptane measurements, investigate
+                        differences between experiments and examine individual
+                        test records instead of relying only on averages.
+                    </p>
+                    <div class="impact-benefit">BENEFIT: EVIDENCE-BASED COMPARISON</div>
+                </article>
+
+                <article class="impact-card">
+                    <span class="impact-number">03</span>
+                    <div class="impact-icon">⌕</div>
+                    <h3>Make Research More Accessible</h3>
+                    <p>
+                        Search, filter, visualize and inspect experimental records
+                        through one interface, making scientific data easier
+                        for students and researchers to explore.
+                    </p>
+                    <div class="impact-benefit">BENEFIT: ACCESSIBLE RESEARCH EXPLORATION</div>
+                </article>
+
+                <article class="impact-card">
+                    <span class="impact-number">04</span>
+                    <div class="impact-icon">◇</div>
+                    <h3>Improve Data Transparency</h3>
+                    <p>
+                        Preserve missing measurements, expose dataset limitations
+                        and allow users to inspect the available records rather
+                        than hiding incomplete information.
+                    </p>
+                    <div class="impact-benefit">BENEFIT: MORE RESPONSIBLE DATA ANALYSIS</div>
+                </article>
+
+                <article class="impact-card">
+                    <span class="impact-number">05</span>
+                    <div class="impact-icon">◎</div>
+                    <h3>Support Future Spacecraft Research</h3>
+                    <p>
+                        Help connect experimental observations with research
+                        questions about fire prevention, material selection
+                        and suppression strategies in crewed spacecraft.
+                    </p>
+                    <div class="impact-benefit">BENEFIT: INFORMED ENGINEERING RESEARCH</div>
+                </article>
+
+                <article class="impact-card">
+                    <span class="impact-number">06</span>
+                    <div class="impact-icon">✧</div>
+                    <h3>Prepare for Moon and Mars Missions</h3>
+                    <p>
+                        Make combustion research relevant to future lunar and
+                        Martian habitats by helping researchers investigate
+                        fire-related challenges in space exploration.
+                    </p>
+                    <div class="impact-benefit">BENEFIT: FUTURE MISSION AWARENESS</div>
+                </article>
+            </div>
+
+            <div class="impact-conclusion">
+                <div>
+                    <span class="impact-label">THE BIGGER PICTURE</span>
+                    <h3>Safer exploration begins with better understanding.</h3>
+                    <p>
+                        Flame in Freefall transforms an available collection of
+                        experimental measurements into an interactive research
+                        experience — helping users explore the science behind
+                        combustion and its relevance to human spaceflight.
+                    </p>
+                </div>
+                <a href="#telemetry" class="primary-button">EXPLORE THE DATA →</a>
+            </div>
+
+            <p class="impact-disclaimer">
+                Research-support platform only. Its findings are exploratory and
+                do not constitute certified spacecraft fire predictions or
+                validated operational safety recommendations. The interface
+                currently uses a partial 100-record export.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<!-- LOAD LIBRARIES AND JAVASCRIPT ONCE, AFTER THE PAGE CONTENT -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="flame-simulator.js"></script>
+
+</body>
+</html>
